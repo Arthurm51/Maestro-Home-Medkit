@@ -1,0 +1,49 @@
+appId: ru.application.homemedkit
+---
+
+- launchApp:
+    clearState:
+
+
+
+
+
+# - assertVisible: ${medicamentName}
+# - assertVisible: ${medicamentGroup}
+# - assertVisible: ${medicamentExpirateDate}
+# - assertVisible: ${displayName}
+# - assertVisible: ${medicamentDescription}
+# - assertVisible: ${medicamentDose}
+# - assertVisible: "${amount} ${measure}"
+# - assertVisible: ${usageIndications}
+# - assertVisible: ${comment}
+# - tapOn:
+#     point: "6%,3%"
+# - assertVisible: "Sorinan Nasal"
+# - assertVisible: "5 ml"
+# - tapOn: "Sorinan Nasal"
+# - tapOn:
+#     point: "94%,3%"
+# - tapOn: "Edit"
+# - tapOn: "Sorinan"
+# - "eraseText"
+# - inputText: "Novo nome do medicamento"
+# - "hideKeyboard"
+# - tapOn: "Sorinan Nasal"
+# - "eraseText"
+# - inputText: "Novo nome no display"
+# - "hideKeyboard"
+# - tapOn:
+#     point: "94%,3%"
+# - assertVisible: "Novo none do medicamento"
+# - tapOn:
+#     point: "6%,3%"
+# - assertVisible: "Novo nome no display"
+# - tapOn: "Novo nome no display"
+# - tapOn:
+#     point: "94%,3%"
+# - tapOn:
+#     point: "87%,14%"
+# - tapOn: "Delete"
+# - assertNotVisible: "Novo nome no display"
+

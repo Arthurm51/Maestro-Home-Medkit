@@ -1,0 +1,56 @@
+appId: ru.application.homemedkit
+
+onFlowStart:
+#   - runFlow: ./open_new_medicament.yaml
+  - runScript: ../../medicament.js
+---
+
+- tapOn:
+    point: ${output.medicament.buttons.iconNewMedicament}
+- scrollUntilVisible:
+    element: ${medicamentType}
+    direction: "DOWN"
+- tapOn: ${medicamentType}
+- tapOn: ${output.medicament.fields.medicamentName}
+- inputText: ${medicamentName}
+- assertVisible: ${medicamentName}
+# - runFlow:
+#     when:
+        # true: ${medicamentGroup =! 'Unspecified'}
+    # commands: 
+    #     - assertVisible: "Welcome ${UserName}!"
+    #     - tapOn: "Welcome ${UserName}!"
+    #     - assertVisible: "Products I added"
+    #     - assertVisible: "View profile"
+- tapOn: ${output.medicament.fields.expirateDate}
+- tapOn: "M${medicamentExpirateDate}"
+- tapOn: ${output.medicament.buttons.saveExpirateDate}
+- tapOn:
+    point: ${output.medicament.fields.displayName}
+- inputText: ${displayName}
+- tapOn:
+    point: ${output.medicament.fields.description}
+- inputText: ${medicamentDescription}
+- "hideKeyboard"
+- tapOn:
+    point: ${output.medicament.fields.dose}
+- inputText: ${medicamentDose}
+- "hideKeyboard"
+- tapOn:
+    point: ${output.medicament.fields.amount}
+- tapOn: ${amount}
+- tapOn:
+    point: ${output.medicament.selectors.measure}
+- tapOn: ${measure}
+- "hideKeyboard"
+- tapOn:
+    point: ${output.medicament.fields.usageIndications}
+- inputText: ${usageIndications}
+- "hideKeyboard"
+- "scroll"
+- tapOn:
+    point: ${output.medicament.fields.comment}
+- inputText: ${comment}
+- "hideKeyboard"
+- tapOn:
+    point: ${output.medicament.buttons.saveMedicament}

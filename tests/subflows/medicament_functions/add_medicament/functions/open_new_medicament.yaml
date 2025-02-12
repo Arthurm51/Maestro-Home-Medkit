@@ -1,0 +1,14 @@
+appId: ru.application.homemedkit
+
+onFlowStart:
+  # - runFlow: ../../../general_functions/launch_app.yaml
+  - runScript: ../../medicament.js
+---
+
+# - runFlow: ../../general_functions/launch_app.yaml
+# - runScript: ../medicament.js
+- tapOn: "Medicine"
+- tapOn:
+    point: ${output.medicament.buttons.newMedicament}
+- tapOn:
+    point: ${output.medicament.buttons.writeMedicament}
