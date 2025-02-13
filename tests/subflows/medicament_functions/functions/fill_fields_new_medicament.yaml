@@ -1,19 +1,24 @@
 appId: ru.application.homemedkit
 
 onFlowStart:
-#   - runFlow: ./open_new_medicament.yaml
-  - runScript: ../../medicament.js
+  - runScript: ../medicament.js
 ---
 
+## Adiciona o icone do medicamento, realizando o scroll até que encontre o icone desejado
 - tapOn:
     point: ${output.medicament.buttons.iconNewMedicament}
 - scrollUntilVisible:
     element: ${medicamentType}
-    direction: "DOWN"
+    direction: "DOWN"    
 - tapOn: ${medicamentType}
+
+## Adiciona o nome do medicamento
 - tapOn: ${output.medicament.fields.medicamentName}
 - inputText: ${medicamentName}
 - assertVisible: ${medicamentName}
+
+## Verifica se foi passado um grupo para o medicamento, em caso de não ser especificado os grupos não são carregados, deixando o medicamento sem grupo. Caso seja passado, é aberto o modal
+## E o grupo é selecionado
 - runFlow:
     when:
         true: ${medicamentGroup != 'Unspecified'}
@@ -22,20 +27,30 @@ onFlowStart:
         - assertVisible: "Medication groups"
         - tapOn: ${medicamentGroup}
         - tapOn: Save
+
+## Adiciona data de expiração
 - tapOn: ${output.medicament.fields.expirateDate}
 - tapOn: "M${medicamentExpirateDate}"
 - tapOn: ${output.medicament.buttons.saveExpirateDate}
+
+## Adiciona o nome que ficará visivel na tela inicial
 - tapOn:
     point: ${output.medicament.fields.displayName}
 - inputText: ${displayName}
+
+## Adiciona a descrição do medicamento
 - tapOn:
     point: ${output.medicament.fields.description}
 - inputText: ${medicamentDescription}
 - "hideKeyboard"
+
+## Adiciona a dosagem
 - tapOn:
     point: ${output.medicament.fields.dose}
 - inputText: ${medicamentDose}
 - "hideKeyboard"
+
+## Quantidade e medida
 - tapOn:
     point: ${output.medicament.fields.amount}
 - tapOn: ${amount}
@@ -43,14 +58,20 @@ onFlowStart:
     point: ${output.medicament.selectors.measure}
 - tapOn: ${measure}
 - "hideKeyboard"
+
+## Indicações de uso
 - tapOn:
     point: ${output.medicament.fields.usageIndications}
 - inputText: ${usageIndications}
 - "hideKeyboard"
 - "scroll"
+
+## Comentarios
 - tapOn:
     point: ${output.medicament.fields.comment}
 - inputText: ${comment}
 - "hideKeyboard"
+
+## Salva o medicamento
 - tapOn:
     point: ${output.medicament.buttons.saveMedicament}

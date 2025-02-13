@@ -2,6 +2,7 @@ appId: ru.application.homemedkit
 
 ---
 
+## Garante que o medicamento esta com todas as informações corretas
 - assertVisible: ${medicamentName}
 - assertVisible: ${medicamentGroup}
 - assertVisible: ${displayName}

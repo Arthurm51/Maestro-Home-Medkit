@@ -1,0 +1,11 @@
+appId: ru.application.homemedkit
+
+---
+
+
+## Clica no botão de voltar enquanto não estiver na tela inicial 
+- repeat:
+    while:
+      notVisible: "Medicine"
+    commands:
+      - tapOn: "Back"

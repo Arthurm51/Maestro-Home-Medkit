@@ -1,6 +1,7 @@
 appId: ru.application.homemedkit
 ---
 
+## Inicia o app e limpa seu estado
 - launchApp:
     clearState:
 
@@ -8,33 +9,5 @@ appId: ru.application.homemedkit
 
 
 
-# - tapOn:
-#     point: "6%,3%"
-# - assertVisible: "Sorinan Nasal"
-# - assertVisible: "5 ml"
-# - tapOn: "Sorinan Nasal"
-# - tapOn:
-#     point: "94%,3%"
-# - tapOn: "Edit"
-# - tapOn: "Sorinan"
-# - "eraseText"
-# - inputText: "Novo nome do medicamento"
-# - "hideKeyboard"
-# - tapOn: "Sorinan Nasal"
-# - "eraseText"
-# - inputText: "Novo nome no display"
-# - "hideKeyboard"
-# - tapOn:
-#     point: "94%,3%"
-# - assertVisible: "Novo none do medicamento"
-# - tapOn:
-#     point: "6%,3%"
-# - assertVisible: "Novo nome no display"
-# - tapOn: "Novo nome no display"
-# - tapOn:
-#     point: "94%,3%"
-# - tapOn:
-#     point: "87%,14%"
-# - tapOn: "Delete"
-# - assertNotVisible: "Novo nome no display"
+
 

@@ -4,6 +4,7 @@ onFlowStart:
   - runScript: ../../group.js
 ---
 
+## Abre a tela de adicionar novo grupo de medicamento
 - tapOn:
     point: ${output.group.buttons.addGroup}
 - assertVisible: "New group"

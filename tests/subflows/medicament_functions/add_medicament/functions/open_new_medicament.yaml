@@ -1,12 +1,10 @@
 appId: ru.application.homemedkit
 
 onFlowStart:
-  # - runFlow: ../../../general_functions/launch_app.yaml
   - runScript: ../../medicament.js
 ---
 
-# - runFlow: ../../general_functions/launch_app.yaml
-# - runScript: ../medicament.js
+## Garante que esteja na tela de "medicine" clicando nela e abre a tela de cadastro de novo medicamento
 - tapOn: "Medicine"
 - tapOn:
     point: ${output.medicament.buttons.newMedicament}

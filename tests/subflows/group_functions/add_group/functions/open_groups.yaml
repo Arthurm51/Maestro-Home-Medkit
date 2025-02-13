@@ -1,8 +1,11 @@
 appId: ru.application.homemedkit
 ---
 
+## Vai para a ba Settings
 - tapOn: "Settings"
+## Clica para ver os grupos de medicamentos
 - tapOn: "Medication groups"
+## Valida que está na tela correta
 - assertVisible: "Medication groups"
 
 

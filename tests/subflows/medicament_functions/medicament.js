@@ -5,7 +5,8 @@ output.medicament = {
         iconNewMedicament: "18%,21%",
         saveExpirateDate: "Save",
         saveMedicament: "94%,3%",
-        
+        kebabMenu: "94%,3%",
+        deleteMedicament: "Delete",
     },
     fields: {
         medicamentName: "Product name",

@@ -5,9 +5,11 @@ onFlowStart:
   - runScript: ../../../general_functions/general.js
 ---
 
+## Adiciona o nome do grupo através da Env (variavel) no arquivo de criação do grupo 
 - tapOn:
     point: ${output.group.fields.groupName}
-- inputText: ${groupName}
+- inputText: ${groupName} ## Variavel Env
+## Salva o grupo, verifica se foi criado, e volta para a tela anterior
 - tapOn: ${output.group.buttons.save}
 - assertVisible: ${groupName}
 - tapOn:

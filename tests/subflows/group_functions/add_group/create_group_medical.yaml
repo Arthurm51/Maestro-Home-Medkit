@@ -1,11 +1,18 @@
 appId: ru.application.homemedkit
 ---
 
+## Inicia o APP
 - runFlow: ../../general_functions/launch_app.yaml
+
+## Abre a tela de grupos
 - runFlow: ./functions/open_groups.yaml
+
+## Abre a tela de criação de novos grupos
 - runFlow: ./functions/go_to_new_group.yaml
+
+## Preenche o campo de novo grupo com o groupName enviado
 - runFlow: 
     file: ./functions/fill_fields_new_group.yaml
     env: 
-      groupName: "Diabetes"
+      groupName: "Probiotico"
      

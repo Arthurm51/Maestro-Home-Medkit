@@ -1,0 +1,19 @@
+appId: ru.application.homemedkit
+
+onFlowStart:
+  - runScript: ../medicament.js
+---
+
+## Clica no medicamento a ser excluido, enviando seu display name através de variável
+- tapOn: ${displayName}
+
+## Já no medicamento escolhido, clica no Kebab Menu (Icone de 3 pontos um em cima do outro no canto superior da tela) 
+- tapOn:
+    point: ${output.medicament.buttons.kebabMenu}
+
+## Deleta o medicamento
+- tapOn: ${output.medicament.buttons.deleteMedicament}
+- tapOn: ${output.medicament.buttons.deleteMedicament}
+
+## Garante que o medicamento não esteja mais visivel
+- assertNotVisible: ${displayName}
