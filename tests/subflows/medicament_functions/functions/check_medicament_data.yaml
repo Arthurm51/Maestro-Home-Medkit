@@ -1,0 +1,12 @@
+appId: ru.application.homemedkit
+
+---
+
+- assertVisible: ${medicamentName}
+- assertVisible: ${medicamentGroup}
+- assertVisible: ${displayName}
+- assertVisible: ${medicamentDescription}
+- assertVisible: ${medicamentDose}
+- assertVisible: ${amountAndMeasure}
+- assertVisible: ${usageIndications}
+- assertVisible: ${comment}

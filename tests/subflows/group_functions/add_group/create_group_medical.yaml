@@ -1,0 +1,11 @@
+appId: ru.application.homemedkit
+---
+
+- runFlow: ../../general_functions/launch_app.yaml
+- runFlow: ./functions/open_groups.yaml
+- runFlow: ./functions/go_to_new_group.yaml
+- runFlow: 
+    file: ./functions/fill_fields_new_group.yaml
+    env: 
+      groupName: "Diabetes"
+     

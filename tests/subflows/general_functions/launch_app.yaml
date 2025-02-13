@@ -8,15 +8,6 @@ appId: ru.application.homemedkit
 
 
 
-# - assertVisible: ${medicamentName}
-# - assertVisible: ${medicamentGroup}
-# - assertVisible: ${medicamentExpirateDate}
-# - assertVisible: ${displayName}
-# - assertVisible: ${medicamentDescription}
-# - assertVisible: ${medicamentDose}
-# - assertVisible: "${amount} ${measure}"
-# - assertVisible: ${usageIndications}
-# - assertVisible: ${comment}
 # - tapOn:
 #     point: "6%,3%"
 # - assertVisible: "Sorinan Nasal"

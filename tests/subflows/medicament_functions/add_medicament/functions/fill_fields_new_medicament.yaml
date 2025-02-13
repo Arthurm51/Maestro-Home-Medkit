@@ -14,14 +14,14 @@ onFlowStart:
 - tapOn: ${output.medicament.fields.medicamentName}
 - inputText: ${medicamentName}
 - assertVisible: ${medicamentName}
-# - runFlow:
-#     when:
-        # true: ${medicamentGroup =! 'Unspecified'}
-    # commands: 
-    #     - assertVisible: "Welcome ${UserName}!"
-    #     - tapOn: "Welcome ${UserName}!"
-    #     - assertVisible: "Products I added"
-    #     - assertVisible: "View profile"
+- runFlow:
+    when:
+        true: ${medicamentGroup != 'Unspecified'}
+    commands: 
+        - tapOn: "Group"
+        - assertVisible: "Medication groups"
+        - tapOn: ${medicamentGroup}
+        - tapOn: Save
 - tapOn: ${output.medicament.fields.expirateDate}
 - tapOn: "M${medicamentExpirateDate}"
 - tapOn: ${output.medicament.buttons.saveExpirateDate}

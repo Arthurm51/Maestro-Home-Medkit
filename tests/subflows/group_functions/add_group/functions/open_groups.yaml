@@ -1,0 +1,9 @@
+appId: ru.application.homemedkit
+---
+
+- tapOn: "Settings"
+- tapOn: "Medication groups"
+- assertVisible: "Medication groups"
+
+
+

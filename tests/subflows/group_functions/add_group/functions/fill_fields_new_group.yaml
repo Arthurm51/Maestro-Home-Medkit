@@ -1,0 +1,14 @@
+appId: ru.application.homemedkit
+
+onFlowStart:
+  - runScript: ../../group.js
+  - runScript: ../../../general_functions/general.js
+---
+
+- tapOn:
+    point: ${output.group.fields.groupName}
+- inputText: ${groupName}
+- tapOn: ${output.group.buttons.save}
+- assertVisible: ${groupName}
+- tapOn:
+    point: ${output.general.buttons.back}

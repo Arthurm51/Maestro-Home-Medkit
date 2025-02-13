@@ -1,19 +1,34 @@
 appId: ru.application.homemedkit
+
+# env: 
+#       medicamentType: "EXTRACT"
+#       medicamentName: "Propolis"
+#       medicamentGroup: "Coracao"
+#       medicamentExpirateDate: "05"
+#       displayName: "Extrato de Propolis"
+#       medicamentDescription: "Fortalece o sistema imunologico e combate infeccoes."
+#       medicamentDose: "15 gotas"
+#       amount: "5"
+#       measure: "ED"
+#       usageIndications: "Maximo 30 gotas por dia"
+#       comment: "Diluir em um cha"
+
 ---
 
 - runFlow: ../../general_functions/launch_app.yaml
 - runFlow: ./functions/open_new_medicament.yaml
-- runFlow: 
-    file: ./functions/fill_fields_new_medicament.yaml
-    env: 
-      medicamentType: "EXTRACT"
-      medicamentName: "Propolis"
-      medicamentExpirateDate: "05"
-      displayName: "Extrato de Propolis"
-      medicamentDescription: "Fortalece o sistema imunologico e combate infeccoes."
-      medicamentDose: "15 gotas"
-      amount: "5"
-      measure: "ED"
-      usageIndications: "Maximo 30 gotas por dia"
-      comment: "Diluir em um cha"
-
+# - runFlow: 
+#     file: ./functions/fill_fields_new_medicament.yaml
+#     env: 
+#       medicamentType: ${medicamentType}
+#       medicamentName: ${medicamentName}
+#       medicamentGroup: ${medicamentGroup}
+#       medicamentExpirateDate: ${medicamentExpirateDate}
+#       displayName: ${displayName}
+#       medicamentDescription: ${medicamentDescription}
+#       medicamentDose: ${medicamentDose}
+#       amount: ${amount}
+#       measure: ${measure}
+#       usageIndications: ${usageIndications}
+#       comment: ${comment}
+- runFlow: ./functions/fill_fields_new_medicament.yaml

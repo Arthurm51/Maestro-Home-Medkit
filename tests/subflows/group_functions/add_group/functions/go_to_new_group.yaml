@@ -1,0 +1,9 @@
+appId: ru.application.homemedkit
+
+onFlowStart:
+  - runScript: ../../group.js
+---
+
+- tapOn:
+    point: ${output.group.buttons.addGroup}
+- assertVisible: "New group"
